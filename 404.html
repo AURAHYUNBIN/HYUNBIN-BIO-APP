@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>TEAM 이현빈 주소가 바뀌었습니다</title>
+<!-- The old address (GitHub Pages) after the app moved to Cloudflare Pages: scripts/retire-old-site.sh publishes this
+     folder. A browser tab goes straight on to the new address; an installed app stays here, since iOS would open
+     the new address inside the old app's frame. -->
+<style>
+  :root { --paper: #ffffff; --ink: #17201b; --ink-3: #6b726e; }
+  @media (prefers-color-scheme: dark) { :root { --paper: #111513; --ink: #eceeec; --ink-3: #9aa29d; } }
+  html, body { margin: 0; background: var(--paper); color: var(--ink); }
+  body { font: 600 17px/1.6 system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; word-break: keep-all; }
+  main { max-width: 480px; margin: 0 auto; padding: max(56px, env(safe-area-inset-top)) 24px 48px; }
+  h1 { margin: 0 0 12px; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.35; }
+  p { margin: 0 0 16px; }
+  .note { color: var(--ink-3); font-size: 15px; }
+  .go { display: block; margin: 28px 0 20px; padding: 16px; border: 2px solid transparent; border-radius: 14px; background: var(--ink); color: var(--paper); font-size: 18px; font-weight: 800; text-align: center; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TEAM 이현빈 주소가 바뀌었습니다</h1>
+  <p>앱 주소가 바뀌었습니다.</p>
+  <a class="go" id="go" href="https://team-hyunbin.pages.dev/">새 주소 열기</a>
+  <p class="note">홈 화면에 설치한 앱이라면 이 아이콘은 지우고, 새 주소에서 다시 설치하세요.</p>
+</main>
+<script>
+  var target = 'https://team-hyunbin.pages.dev/' + location.hash
+  document.getElementById('go').href = target
+  var installed = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true
+  if (!installed) location.replace(target)
+</script>
+</body>
+</html>
